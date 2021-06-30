@@ -1,0 +1,139 @@
+:root{
+  /* color */
+  --black-color: #000000;
+  --dark-gray: #848688;
+  --gray: #e3e4eb;
+  --bright-gray: #F1F3F4;
+  --red-color: #FF0000;
+  --blue-color: #1DA1F2;
+  --white-color: #FFFFFF;
+  --blue-op-color: #a4d3f02f;
+
+  /* margin */
+  --margin: 24px;
+
+  /* padding */
+  --side-padding: 0.5rem;
+  --icon-padding: 24px;
+
+  /* general-size */
+  --g-size: 32px;
+
+  /* font-size */
+  --small-font-size: 13px;
+
+  /* min-width */
+  --min-width: 953px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: 'NotoSansKR', '맑은 고딕', 'Malgun Gothic', 돋움, Dotum, 'Apple SD Gothic Neo', sans-serif;
+  min-width: var(--min-width);
+}
+
+body{
+  position: relative;
+}
+
+/* header */
+header{
+  padding: 6px;
+}
+header .sub-menu{
+  display: flex;
+  justify-content: flex-end;
+}
+header .sub-menu a{
+  padding: var(--side-padding);
+  font-size: var(--small-font-size);
+  line-height: 13px;
+}
+
+header .sub-menu a:hover{
+  text-decoration: underline;
+}
+
+/* section */
+
+section .wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section .wrapper .search{
+  margin: var(--margin);
+  border: none;
+  box-shadow: 1px 1px 3px rgb(160, 159, 159);
+  border-radius: var(--g-size);
+}
+section .wrapper .search .search-wrapper{
+  display: inline;
+  padding: 8px;
+}
+section .wrapper .search .search-wrapper input{
+  border: none;
+  height: var(--g-size);
+  /* width: 426vh;  */
+  width: 50vh;
+}
+section .wrapper .shortcuts{
+  display: flex;
+}
+section .wrapper .shortcuts li{
+  margin: var(--margin);
+}
+section .wrapper .shortcuts a{
+  display: inline-block;
+  padding: var(--icon-padding);
+}
+section .wrapper .shortcuts li:nth-child(3) a{
+  padding: var(--icon-padding) calc(var(--icon-padding)/4) var(--icon-padding) calc(var(--icon-padding)/4);
+}
+section .wrapper .shortcuts a:hover{
+  background-color: var(--gray);
+}
+section .wrapper .shortcuts a div{
+  text-align: center;
+  background-color: var(--bright-gray);
+  border-radius: var(--g-size);
+  width: calc(var(--g-size)*1.5);
+  height: calc(var(--g-size)*1.5);
+  margin: auto;
+}
+section .wrapper .shortcuts a div i{
+  line-height: 48px;
+}
+section .wrapper .shortcuts a span{
+  font-size: var(--small-font-size); 
+}
+
+/* footer */
+footer .fixed-icon{
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  padding: var(--side-padding);
+}
+footer .fixed-icon button{
+  background-color: var(--white-color);
+  color: var(--blue-color);
+  box-shadow: 1px 1px 5px var(--dark-gray);
+  border-radius: var(--g-size);
+  padding: calc(var(--icon-padding)/3);
+  font-size: var(--small-font-size);
+}
+footer .fixed-icon button:hover{
+  background-color: var(--blue-op-color);
+  cursor: pointer;
+}
